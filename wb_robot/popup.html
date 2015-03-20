@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Robot</title>
+<style type="text/css">
+html, body, body * {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ui-panel {
+    width: 600px;
+}
+.ui-panel-title {
+    width: 100%;
+    text-align:center;
+}
+.ui-panel-main {
+    width: 100%;
+    padding: 6px 10px;
+    /*min-height: 400px;*/
+}
+.ui-txt, .ui-input{
+    width: 100%;
+}
+.ui-txt {
+    min-height: 400px;
+}
+
+.ui-btn {
+    display: inline-block;
+    /*border: 1px solid blue;*/
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #00B2B8;
+    /*border-radius: 6px;*/
+    text-align: center;
+    cursor: pointer;
+}
+#pub_btn {
+    
+}
+</style>
+</head>
+
+<body>
+    
+<div class="ui-panel">
+    <div class="ui-panel-title">定时发送微博</div>
+    <ul class="ui-panel-main">
+        <li><div contenteditable="true" class="ui-txt"></div></li>
+        <li><input class="ui-input" value="120000" placeholder="时间间隔" /> ms</li>
+        <li>浏览权限<select id="wb_rank">
+            <option value="0">公开</option>
+            <option selected="selected" value="1">个人</option>
+        </select></li>
+    </ul>
+
+    <div class="ui-btn" id="pub_btn" href="javascript;">开始</div>
+    <div class="ui-btn" id="stop_btn" href="javascript;">停止</div>
+</div>
+
+
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+</body>
